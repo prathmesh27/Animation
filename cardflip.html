@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<title></title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<style type="text/css">
+
+			@import url('https://fonts.googleapis.com/css?family=Anton|Pacifico');
+
+.flipper-container{
+  position:relative;
+  margin:35px auto;
+  perspective:1000;
+  width:450px;
+  height:300px;
+}
+.flip{
+  height:100%;
+  width:100%;
+  transform-style:preserve-3d;
+  transition:all 1s;
+}
+.flipper-container:hover .flip{
+  transform:rotateY(180deg);
+}
+.face{
+  position:absolute;
+  height:100%;
+  width:100%;
+  backface-visibility:hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+  position: relative;
+  color: #fff;
+  text-align: center;
+  background-color:#fff;
+}
+.back h2{
+
+  font-family:Pacifico;
+  letter-spacing:1px;
+  font-size:30px;
+  color: #000;
+}
+.textfront,.textback{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+		</style>
+</head>
+<body>
+
+<div class="row">
+<div class="col-lg-4">
+<div class="flipper-container">
+  <div class="flip">
+    <div class="front face text-center">
+      <img src="images/LP/1.png" >
+      <div class="textfront">
+      	sadf
+  	</div>
+    </div>
+  <div class="back face">
+  	 <img src="images/LP/1.png" >
+  	 <div class="textback">
+    	<h2>Hello There !!</h2>
+    </div>	
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="flipper-container">
+  <div class="flip">
+    <div class="front face text-center">
+      <img src="images/LP/1.png" >
+      <div class="textfront">
+      	sadf
+  	</div>
+    </div>
+  <div class="back face">
+  	 <img src="images/LP/1.png" >
+  	 <div class="textback">
+    	<h2>Hello There !!</h2>
+    </div>	
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="flipper-container">
+  <div class="flip">
+    <div class="front face text-center">
+      <img src="images/LP/1.png" >
+      <div class="textfront">
+      	sadf
+  	</div>
+    </div>
+  <div class="back face">
+  	 <img src="images/LP/1.png" >
+  	 <div class="textback">
+    	<h2>Hello There !!</h2>
+    </div>	
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		body {
+  
+}
+.header img{
+	width: 200px;
+}
+/*.header {
+  height: 200px; 
+  background-color: rgba(0,0,0,0.5);
+  
+  top: 200;
+  width: 100%;
+  transition: all 0.5s;
+}
+*/
+
+.header-alt {
+ /* height: 100px;
+  background-color: rgba(0,0,0, 0.8);
+  top: 200;
+  width: 100%;*/
+  transition: all 0.5s;
+}
+.box {
+    opacity: 1;
+    animation: box 1s ease-in-out 0.1s  alternate ;
+    margin-top: -80px;
+    max-width:100%;
+    display:  inline-block; 
+}
+@-webkit-keyframes box {
+  
+  
+ 
+
+/*  100.0000% { -webkit-transform: translate(519.0px, 115.0px) ; }
+*/
+     0.0000% { -webkit-transform: translate(0.0px, 0.0px) ;}
+  10.8579% { -webkit-transform: translate(25.9px, 1.1px) ; }
+  15.7846% { -webkit-transform: translate(57.3px, 4.9px) ; }
+  20.6639% { -webkit-transform: translate(124.7px, 18.8px) ; }
+  25.4965% { -webkit-transform: translate(195.8px, 38.7px) ; }
+  30.5796% { -webkit-transform: translate(339.0px, 83.5px) ; }
+  35.5446% { -webkit-transform: translate(405.7px, 102.0px) ; }
+  40.9847% { -webkit-transform: translate(465.6px, 113.6px) ; }
+  45.9894% { -webkit-transform: translate(492.3px, 115.9px) ; }
+  50.0000% { -webkit-transform: translate(519.0px, 115.0px) ; }
+
+/*  55.0000% { -webkit-transform: translate(492.0px, 115.0px) ; }
+    40.9847% { -webkit-transform: translate(465.6px, 113.6px) ; }*/
+}
+
+.wrapper {  
+  height: 2000px;
+  padding-top: 200px;
+}
+
+	</style>
+</head>
+<body>
+<div class="" style="padding: 0 0 40% 0;background: #eee">
+</div>
+
+<header class="header box2">
+		<img src="images/space.png">
+</header>
+
+<div class="wrapper">
+  test
+</div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+<script>
+
+	$(function() {
+    var header = $(".header");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+        
+    
+        if (scroll >= 300) {
+            header.removeClass('box2').addClass("box");
+        } else {
+            header.removeClass("box").addClass('box2');
+        }
+    });
+});
+</script>
+</body>
+</html>

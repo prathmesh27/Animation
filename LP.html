@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="animate.css">
+	<title></title>
+	<style type="text/css">
+		body {
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 			0;
+  overflow-x: 	hidden;	
+}
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+  margin: auto;
+  background-color: #48c9b0;
+  color: #ffffff;
+}
+.section.bg-static,.section.bg-static2 {
+  background-color: #85c1e9;
+  background-image: url("https://www.dropbox.com/s/v4u0mpzfplgjxaq/img-blog-background-move-scrolling-bg.png?raw=1");
+  background-size: cover;
+  background-position: center;
+}
+.section .bg-move,.section .bg-move2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: auto;
+  width: 100%;
+  background-image: url("https://www.dropbox.com/s/isdqow2394y3t35/img-blog-background-move-scrolling-boat.png?raw=1");
+  background-size: cover;
+  background-position: center;
+}
+	</style>
+</head>
+<body>
+<div class="section1" style="margin-bottom: 	10%"	>
+<div class="fire"><!-- 
+	<img src="images/fire.png" class="pulse"> -->
+</div>
+</div>
+
+<div class="section">
+  <p  class="bounce">Scroll down to see the effect</p>
+</div>
+<div class="section">
+  Scroll down to see the effect
+</div>
+<div class="section bg-static">
+  <div class="bg-move"></div>
+</div>
+<div class="section">
+  The boat image is moving only when scrolling. 
+</div>
+<div class="section bg-static2">
+  <div class="bg-move2"></div>
+</div>
+
+<div class="section">
+  Scroll down to see the effect
+</div>
+<div class="section">
+  Scroll down to see the effect
+</div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	//
+		  $(document).ready(function() {
+		  		// $(".bg-static").hide();
+		  });
+
+
+
+	//
+	$(window).on("load resize scroll", function() {
+		// $(".bg-static").show();
+  $(".bg-static").each(function() {
+    var windowTop = $(window).scrollTop();
+    var elementTop = $(this).offset().top;
+    var rightPosition = windowTop - elementTop;
+      $(this)
+        .find(".bg-move")
+        .css({ right: rightPosition });
+  });
+});
+		$(window).on("load resize scroll", function() {
+  $(".bg-static2").each(function() {
+    var windowTop = $(window).scrollTop();
+    var elementTop = $(this).offset().top;
+    var leftPosition = windowTop - elementTop;
+      $(this)
+        .find(".bg-move2")
+        .css({ left: leftPosition });
+  });
+});
+</script>
+</body>
+</html>
